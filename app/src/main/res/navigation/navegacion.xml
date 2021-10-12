@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.calculadoraments.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/fragPacienteNuevo"
+        android:name="com.example.calculadoraments.FragPacienteNuevo"
+        android:label="fragment_frag_paciente_nuevo"
+        tools:layout="@layout/fragment_frag_paciente_nuevo" >
+        <action
+            android:id="@+id/action_fragPacienteNuevo_to_fragEnfermedad"
+            app:destination="@id/fragEnfermedad" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragEnfermedad"
+        android:name="com.example.calculadoraments.FragEnfermedad"
+        android:label="fragment_frag_enfermedad"
+        tools:layout="@layout/fragment_frag_enfermedad" >
+        <action
+            android:id="@+id/action_fragEnfermedad_to_fragProced"
+            app:destination="@id/fragProced" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragProced"
+        android:name="com.example.calculadoraments.FragProced"
+        android:label="fragment_frag_proced"
+        tools:layout="@layout/fragment_frag_proced" >
+        <action
+            android:id="@+id/action_fragProced_to_fragResultado"
+            app:destination="@id/fragResultado" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragResultado"
+        android:name="com.example.calculadoraments.FragResultado"
+        android:label="fragment_frag_resultado"
+        tools:layout="@layout/fragment_frag_resultado" />
+</navigation>
