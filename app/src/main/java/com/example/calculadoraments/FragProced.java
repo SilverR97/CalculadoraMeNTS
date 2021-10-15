@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +25,7 @@ public class FragProced extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    TextView prueba;
     public FragProced() {
         // Required empty public constructor
     }
@@ -59,6 +61,14 @@ public class FragProced extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_frag_proced, container, false);
+        View view = inflater.inflate(R.layout.fragment_frag_proced, container, false);
+
+        prueba = view.findViewById(R.id.txtPruebaData);
+        Bundle bundle = this.getArguments();
+        int datosf12 = bundle.getInt("TotFrag12");
+        prueba.setText(""+datosf12);
+
+
+        return view;
     }
 }

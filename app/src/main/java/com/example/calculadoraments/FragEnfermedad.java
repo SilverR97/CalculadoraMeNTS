@@ -3,38 +3,37 @@ package com.example.calculadoraments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
+import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 
 public class FragEnfermedad extends Fragment {
+    Button BotonProced;
+
     //Inicializamos las variables que contendran los valores asignados a cada respuesta
-    private int nETNQ = 0;
-    private int nRETNQ = 0;
-    private int nIE2S = 0;
-    private int nIDC2S = 0;
-    private int nIE6S = 0;
-    private int nIDC6S = 0;
-    private int totF2 = 0;
+    int nETNQ = 0;
+    int nRETNQ = 0;
+    int nIE2S = 0;
+    int nIDC2S = 0;
+    int nIE6S = 0;
+    int nIDC6S = 0;
+    int totF2 = 0;
+    int totalAcumulado =0;
 
     // Creamos los radio groups y los botones seleccionados de cada sección
     RadioGroup rg1;
-    //RadioButton rb1;
     RadioGroup rg2;
-    //RadioButton rb2;
     RadioGroup rg3;
-    //RadioButton rb3;
     RadioGroup rg4;
-    //RadioButton rb4;
     RadioGroup rg5;
-    //RadioButton rb5;
     RadioGroup rg6;
-    //RadioButton rb6;
     TextView tot;
     public FragEnfermedad() {
         // Required empty public constructor
@@ -50,8 +49,14 @@ public class FragEnfermedad extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_frag_enfermedad, container, false);
+
+        Bundle bundle = this.getArguments();
+        int datosf1 = bundle.getInt("TotFrag1");
+
         rg1 = view.findViewById(R.id.RG_ETNQ);
         rg2 = view.findViewById(R.id.RG_RETNQ);
         rg3 = view.findViewById(R.id.RG_IE2SEM);
@@ -59,6 +64,7 @@ public class FragEnfermedad extends Fragment {
         rg5= view.findViewById(R.id.RG_IE6SEM);
         rg6= view.findViewById(R.id.RG_IDC6SEM);
         tot = view.findViewById(R.id.TextTotalFg2);
+
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
             //método para actualizar la respuesta seleccionada en el primer Radio Group e ir sumando sus respectivos puntos.
         {
@@ -67,30 +73,30 @@ public class FragEnfermedad extends Fragment {
                 switch (chekedId){
                     case R.id.rbETNQ1:
                         nETNQ = 1;
-                        System.out.println(nETNQ);
+                        //System.out.println(nETNQ);
                         break;
                     case R.id.rbETNQ2:
                         nETNQ = 2;
-                        System.out.println(nETNQ);
+                        //System.out.println(nETNQ);
                         break;
                     case R.id.rbETNQ3:
                         nETNQ = 3;
-                        System.out.println(nETNQ);
+                        //System.out.println(nETNQ);
                         break;
                     case R.id.rbETNQ4:
                         nETNQ = 4;
-                        System.out.println(nETNQ);
+                        //System.out.println(nETNQ);
                         break;
                     case R.id.rbETNQ5:
                         nETNQ = 5;
-                        System.out.println(nETNQ);
+                        //System.out.println(nETNQ);
                         break;
 
                 }
 
             }
         });
-        //ystem.out.println(nETNQ);
+
         rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
                 //método para actualizar la respuesta seleccionada en el segundo Radio Group e ir sumando sus respectivos puntos.
         {
@@ -119,7 +125,6 @@ public class FragEnfermedad extends Fragment {
                 }
             }
         });
-
 
         rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
                 //método para actualizar la respuesta seleccionada en el tercer Radio Group e ir sumando sus respectivos puntos.
@@ -234,8 +239,33 @@ public class FragEnfermedad extends Fragment {
                         //System.out.println(nETNQ);
                         break;
                 }
+                totF2=nETNQ+nRETNQ+nIE2S+nIDC2S+nIE6S+nIDC6S;
+                tot.setText("Total: "+totF2);
+                totalAcumulado = datosf1 + totF2;
+                //System.out.println(totF2)
             }
         });
+
+        BotonProced = view.findViewById(R.id.btnSigProced);
+        BotonProced.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("TotFrag12", totalAcumulado);
+                Fragment fragment3 = new FragProced();
+
+                BotonProced.setVisibility(View.GONE);
+
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction transaction= fragmentManager.beginTransaction();
+                transaction.setReorderingAllowed(true);
+                fragment3.setArguments(bundle);
+                transaction.replace(R.id.fragEnf, fragment3).commit();
+            }
+        });
+
         return view;
     }
+
 }

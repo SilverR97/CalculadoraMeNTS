@@ -13,11 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:text="Contacto con COVID positivo(14 días)"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="16sp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Gripa" />
 
@@ -25,7 +25,7 @@
         android:id="@+id/ContactoCovid"
         android:layout_width="364dp"
         android:layout_height="23dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,11 +36,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/roboto"
         android:text="Sintomas de gripa"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="20sp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Inmuno" />
 
@@ -48,7 +48,7 @@
         android:id="@+id/Gripa"
         android:layout_width="364dp"
         android:layout_height="23dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,11 +59,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:text="Inmunocomprometido"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="20sp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Diabetes" />
 
@@ -71,7 +71,7 @@
         android:id="@+id/Inmuno"
         android:layout_width="364dp"
         android:layout_height="23dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
         android:fontFamily="@font/roboto"
         android:text="Diabetes"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatCardio" />
 
@@ -94,8 +94,9 @@
         android:id="@+id/Diabetes"
         android:layout_width="364dp"
         android:layout_height="23dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -104,11 +105,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:text="Patología Cardiovascular"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SAOS" />
 
@@ -116,7 +117,7 @@
         android:id="@+id/PatCardio"
         android:layout_width="364dp"
         android:layout_height="23dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,7 +132,7 @@
         android:fontFamily="@font/roboto"
         android:text="SAOS"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AfPulmo" />
 
@@ -139,7 +140,7 @@
         android:id="@+id/SAOS"
         android:layout_width="364dp"
         android:layout_height="23dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +155,7 @@
         android:fontFamily="@font/roboto"
         android:text="Edad"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="20sp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -198,13 +199,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:text="Afección pulmonar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBarEdad" />
+
+    <Spinner
+        android:id="@+id/AfPulmo"
+        android:layout_width="364dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <SeekBar
         android:id="@+id/seekBarEdad"
@@ -218,14 +229,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <Spinner
-        android:id="@+id/AfPulmo"
-        android:layout_width="364dp"
+    <TextView
+        android:id="@+id/textBRangoEdad"
+        android:layout_width="135dp"
         android:layout_height="23dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="40dp"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toEndOf="@+id/seekBarEdad"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <TextView
+        android:id="@+id/txtTotPNuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="Total: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSigEnf"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

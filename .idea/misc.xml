@@ -15,8 +15,9 @@
         <entry key="..\:/rey_g/Documents/2021-2/CalculadoraMeNTS2/app/src/main/res/layout/activity_main.xml" value="0.1265625" />
         <entry key="..\:/rey_g/Documents/2021-2/CalculadoraMeNTS2/app/src/main/res/layout/fragment_blank.xml" value="0.25416666666666665" />
         <entry key="..\:/rey_g/Documents/2021-2/CalculadoraMeNTS2/app/src/main/res/layout/fragment_frag1.xml" value="0.1265625" />
-        <entry key="..\:/rey_g/Documents/2021-2/CalculadoraMeNTS2/app/src/main/res/layout/fragment_frag_enfermedad.xml" value="0.4" />
-        <entry key="..\:/rey_g/Documents/2021-2/CalculadoraMeNTS2/app/src/main/res/layout/fragment_frag_paciente_nuevo.xml" value="0.176" />
+        <entry key="..\:/rey_g/Documents/2021-2/CalculadoraMeNTS2/app/src/main/res/layout/fragment_frag_enfermedad.xml" value="0.176" />
+        <entry key="..\:/rey_g/Documents/2021-2/CalculadoraMeNTS2/app/src/main/res/layout/fragment_frag_paciente_nuevo.xml" value="0.4" />
+        <entry key="..\:/rey_g/Documents/2021-2/CalculadoraMeNTS2/app/src/main/res/layout/fragment_frag_proced.xml" value="0.264" />
       </map>
     </option>
   </component>
